@@ -4,6 +4,7 @@ import './globals.css';
 import { ClerkProviderWrapper } from '@/components/ClerkProvider';
 import { ConvexProviderWrapper } from '@/components/ConvexProviderWrapper';
 import { AuthProvider } from '@/lib/authContext';
+import { Analytics } from '@/components/Analytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <ConvexProviderWrapper>
             <AuthProvider>
               {children}
+              <Analytics/>
             </AuthProvider>
           </ConvexProviderWrapper>
         </ClerkProviderWrapper>
